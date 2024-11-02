@@ -1,0 +1,16 @@
+/* styles/Home.module.css */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #f0f4f8; /* Light background color */
+}
+
+.title {
+  font-size: 2rem;
+  color: #333; /* Dark text color */
+  margin-bottom: 20px;
+}

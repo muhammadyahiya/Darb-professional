@@ -7,10 +7,10 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { AlertCircle } from "lucide-react"
 
 export default function AITrainerPage() {
-  const [query, setQuery] = useState('')
-  const [response, setResponse] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  // const [query, setQuery] = useState('')
+  // const [response, setResponse] = useState('')
+  // const [isLoading, setIsLoading] = useState(false)
+  // const [error, setError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

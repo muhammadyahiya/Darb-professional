@@ -1,9 +1,8 @@
-'use client'
+// 'use client'
 
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-// import { Textarea } from "@/components/ui/textarea"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { AlertCircle } from "lucide-react"
 
@@ -68,7 +67,7 @@ export default function AITrainerPage() {
               <Input
                 id="query"
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)}
                 placeholder="e.g., How do I create effective data visualizations?"
                 className="h-24"
                 required

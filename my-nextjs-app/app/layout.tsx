@@ -1,7 +1,6 @@
-import '@/styles/globals.css'
+import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,51 +15,77 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={inter.className}>
-        <div className="relative flex min-h-screen flex-col">
-          <header className="sticky top-0 z-40 w-full border-b bg-background">
-            <div className="container flex h-16 items-center justify-between">
-              <Link href="/" className="flex items-center space-x-2">
-                <span className="text-2xl font-bold">DARB Pro</span>
-              </Link>
-              <nav className="hidden md:flex gap-6">
-                <Link href="/" className="text-sm font-medium hover:text-primary">
-                  Home
+        <div className="flex min-h-screen flex-col">
+          <header className="border-b bg-white">
+            <div className="container mx-auto px-4">
+              <nav className="flex h-16 items-center justify-between">
+                <Link 
+                  href="/" 
+                  className="text-xl font-bold text-gray-900 no-underline hover:text-gray-700"
+                >
+                  DARB Pro
                 </Link>
-                <Link href="/courses" className="text-sm font-medium hover:text-primary">
-                  Courses
-                </Link>
-                <Link href="/ai-trainer" className="text-sm font-medium hover:text-primary">
-                  AI Trainer
-                </Link>
-                <Link href="/sign-up" className="text-sm font-medium hover:text-primary">
-                  Sign Up
+                <div className="hidden md:flex items-center space-x-6">
+                  <Link 
+                    href="/" 
+                    className="text-sm font-medium text-gray-700 no-underline hover:text-gray-900"
+                  >
+                    Home
+                  </Link>
+                  <Link 
+                    href="/courses" 
+                    className="text-sm font-medium text-gray-700 no-underline hover:text-gray-900"
+                  >
+                    Courses
+                  </Link>
+                  <Link 
+                    href="/ai-trainer" 
+                    className="text-sm font-medium text-gray-700 no-underline hover:text-gray-900"
+                  >
+                    AI Trainer
+                  </Link>
+                  <Link 
+                    href="/sign-up" 
+                    className="text-sm font-medium text-gray-700 no-underline hover:text-gray-900"
+                  >
+                    Sign Up
+                  </Link>
+                </div>
+                <Link
+                  href="/sign-up"
+                  className="inline-flex items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 no-underline"
+                >
+                  Get Started
                 </Link>
               </nav>
-              <div className="flex items-center gap-4">
-                <Button asChild>
-                  <Link href="/sign-up">Get Started</Link>
-                </Button>
-              </div>
             </div>
           </header>
-          <main className="flex-1">{children}</main>
-          <footer className="border-t">
-            <div className="container flex flex-col gap-4 py-10 md:h-24 md:flex-row md:py-0">
-              <div className="flex flex-col gap-4 md:flex-row md:gap-6 md:items-center">
-                <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
+          <main className="flex-1">
+            {children}
+          </main>
+          <footer className="border-t bg-white">
+            <div className="container mx-auto px-4 py-8">
+              <div className="flex flex-col md:flex-row justify-between items-center">
+                <p className="text-sm text-gray-500">
                   © 2024 DARB Professionals. All rights reserved.
                 </p>
+                <div className="flex space-x-6 mt-4 md:mt-0">
+                  <Link 
+                    href="/privacy" 
+                    className="text-sm text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Privacy Policy
+                  </Link>
+                  <Link 
+                    href="/terms" 
+                    className="text-sm text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Terms of Service
+                  </Link>
+                </div>
               </div>
-              <nav className="flex gap-4 md:ml-auto md:gap-6">
-                <Link href="/privacy" className="text-sm font-medium hover:underline">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms" className="text-sm font-medium hover:underline">
-                  Terms of Service
-                </Link>
-              </nav>
             </div>
           </footer>
         </div>

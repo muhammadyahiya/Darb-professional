@@ -42,9 +42,9 @@ export default function AITrainerPage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="max-w-4xl mx-auto mt-2 space-y-8">
       <div className="space-y-4">
-        <h1 className="text-3xl font-bold">AI Training Assistant</h1>
+        <h1 className="text-3xl font-bold text-accent">AI Training Assistant</h1>
         <p className="text-muted-foreground">
           Get personalized guidance and answers to your data analysis and business reporting questions.
         </p>
@@ -65,12 +65,19 @@ export default function AITrainerPage() {
               <label htmlFor="query" className="text-sm font-medium">
                 Ask your question
               </label>
-              <Input
+              {/* <Input
                 id="query"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="e.g., How do I create effective data visualizations?"
                 className="h-24"
+                required
+              /> */}
+              <Textarea
+                id="query"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="e.g., How do I create effective data visualizations?"
                 required
               />
             </div>

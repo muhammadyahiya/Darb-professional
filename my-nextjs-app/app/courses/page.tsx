@@ -10,8 +10,8 @@ const courses = [
 
 export default function CoursesPage() {
   return (
-    <div className="space-y-8">
-      <h1 className="text-3xl font-bold">Our Courses</h1>
+    <div className="space-y-8 px-4 my-[20px]">
+      <h1 className="text-3xl font-bold text-accent text-center">Our Courses</h1>
       <div className="grid md:grid-cols-2 gap-6">
         {courses.map((course) => (
           <div key={course.id} className="bg-card text-card-foreground rounded-lg shadow-md p-6 space-y-4">

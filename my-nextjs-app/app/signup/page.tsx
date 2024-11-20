@@ -28,24 +28,24 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className="max-w-md mx-auto space-y-8">
-      <h1 className="text-3xl font-bold">Sign Up</h1>
+    <div className="max-w-md mx-auto mt-4 space-y-8">
+      <h1 className="text-3xl font-bold text-accent">Sign Up</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-2">
           <Label htmlFor="name">Full Name</Label>
-          <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
+          <Input id="name" name="name" value={formData.name} placeholder='Name' onChange={handleChange} required />
         </div>
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />
+          <Input id="email" name="email" type="email" value={formData.email} placeholder='Email' onChange={handleChange} required />
         </div>
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
-          <Input id="password" name="password" type="password" value={formData.password} onChange={handleChange} required />
+          <Input id="password" name="password" type="password" value={formData.password} placeholder='Password' onChange={handleChange} required />
         </div>
         <div className="space-y-2">
           <Label htmlFor="confirmPassword">Confirm Password</Label>
-          <Input id="confirmPassword" name="confirmPassword" type="password" value={formData.confirmPassword} onChange={handleChange} required />
+          <Input id="confirmPassword" name="confirmPassword" type="password" value={formData.confirmPassword} placeholder='Confirm Password' onChange={handleChange} required />
         </div>
         <Button type="submit" className="w-full">Sign Up</Button>
       </form>

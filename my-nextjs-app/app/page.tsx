@@ -14,7 +14,7 @@ export default function Home() {
             Elevate your data analysis and reporting skills for business success
           </p>
           <Link
-            href="/sign-up"
+            href="/signup"
             className="mt-8 inline-flex items-center justify-center rounded-md bg-gray-900 px-6 py-3 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 no-underline"
           >
             Get Started
